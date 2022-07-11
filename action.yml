@@ -1,7 +1,8 @@
 name: "Obliterate-Repository"
 description: "Obliterate THE repository leaving nothing behind."
-icon: alert-triangle
-color: gray-dark
+branding:
+  icon: "alert-triangle"
+  color: "gray-dark"
 inputs:
   branch:
     description: "The branch to obliterate"
