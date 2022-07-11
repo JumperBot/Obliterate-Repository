@@ -26,6 +26,6 @@ Add this to your `Actions`:
     message: ":boom: End Game Commit" # defaults to :boom: Obliterated!
 ```
 
-#License
+# License
 
 This is licensed under the [MIT LICENSE](./LICENSE)
