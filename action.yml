@@ -1,0 +1,17 @@
+name: "Obliterate-Repository"
+description: "Greet someone and record the time"
+inputs:
+  branch:
+    description: "The branch to obliterate"
+    required: false
+    default: "master"
+  message:
+    description: "The commit message to pass with: git commit -a -m"
+    required: false
+    default: ":boom: Obliterated!"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.branch }}
+    - ${{ inputs.message }} 
