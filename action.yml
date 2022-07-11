@@ -1,0 +1,20 @@
+name: "Obliterate-Repository"
+description: "Obliterate THE repository leaving nothing behind."
+branding:
+  icon: "alert-triangle"
+  color: "gray-dark"
+inputs:
+  branch:
+    description: "The branch to obliterate"
+    required: false
+    default: "master"
+  message:
+    description: "The commit message to pass with: git commit -a -m"
+    required: false
+    default: ":boom: Obliterated!"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.branch }}
+    - ${{ inputs.message }} 
