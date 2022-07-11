@@ -1,5 +1,7 @@
 name: "Obliterate-Repository"
 description: "Greet someone and record the time"
+icon: "alert-triangle"
+color: "gray-dark"
 inputs:
   branch:
     description: "The branch to obliterate"
