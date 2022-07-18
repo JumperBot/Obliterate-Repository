@@ -20,7 +20,7 @@ Add this to your `Actions`:
 
 ```yaml
 - name: Obliterate-Repository
-  uses: JumperBot/Obliterate-Repository@v1
+  uses: JumperBot/Obliterate-Repository@v1.1
   with:
     branch: "dev-branch" # defaults to master
     message: ":boom: End Game Commit" # defaults to :boom: Obliterated!
