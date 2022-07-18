@@ -24,8 +24,9 @@ Add this to your `Actions`:
   with:
     branch: "dev-branch" # defaults to master
     message: ":boom: End Game Commit" # defaults to :boom: Obliterated!
+    preserve-readme: true # defaults to: false
 ```
 
-# License
+#License
 
 This is licensed under the [MIT LICENSE](./LICENSE)

@@ -10,12 +10,20 @@ git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
 mv .git/ ../
 cd ..
+rm -rf workspace/.*
 rm -rf workspace/*
 mv .git/ workspace/
 cd workspace
 
-git add -A
-git commit -a -m "$2"
-git push --set-upstream origin "$1"
+if [ $3 = true ]; then
+  git restore README.*
+fi
 
-echo "We're done over here!"
+if [ -n "$(git status --porcelain)" ]; then
+  git add -A
+  git commit -m "$2"
+  git push --set-upstream origin "$1"
+  echo "We're done over here!"
+else
+  echo "Nothing to commit here!"
+fi
