@@ -20,13 +20,24 @@ Add this to your `Actions`:
 
 ```yaml
 - name: Obliterate-Repository
-  uses: JumperBot/Obliterate-Repository@v1.1
+  uses: JumperBot/Obliterate-Repository@v1.2
   with:
-    branch: "dev-branch" # defaults to master
-    message: ":boom: End Game Commit" # defaults to :boom: Obliterated!
-    preserve-readme: true # defaults to: false
+    # defaults to master
+    branch: "dev-branch"
+    
+    # defaults to :boom: Obliterated!
+    message: ":boom: End Game Commit"
+
+    # defaults to false
+    preserve-readme: true
+
+    # defaults to README.md
+    readme-file: "README.amd"
+
+    # defaults to nothing
+    readme-message: "readme"
 ```
 
-#License
+# License
 
 This is licensed under the [MIT LICENSE](./LICENSE)

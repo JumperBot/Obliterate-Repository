@@ -16,7 +16,12 @@ mv .git/ workspace/
 cd workspace
 
 if [ $3 = true ]; then
-  git restore README.*
+  git restore $4
+fi
+
+if [ "$5" != "" ]; then
+  echo >> $4
+  echo -e "$5" >> $4
 fi
 
 if [ -n "$(git status --porcelain)" ]; then

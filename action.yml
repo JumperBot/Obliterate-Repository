@@ -9,17 +9,27 @@ inputs:
     required: false
     default: "master"
   message:
-    description: "The commit message to pass with: git commit -a -m"
+    description: "The commit message to pass before git push"
     required: false
     default: ":boom: Obliterated!"
   preserve-readme:
-    decription: "At least 1 root/README.* will be preserved"
+    decription: "README file will be preserved"
     requied: false
     default: false
+  readme-file:
+    description: "One README file to be recognized"
+    required: false
+    default: "README.md"
+  readme-message:
+    decription: "Add/create README with the specified message"
+    requied: false
+    default: ""
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
     - ${{ inputs.branch }}
-    - ${{ inputs.message }} 
-    - ${{ inputs.preserve-readme }} 
+    - ${{ inputs.message }}
+    - ${{ inputs.preserve-readme }}
+    - ${{ inputs.readme-file }}
+    - ${{ inputs.readme-message }}
